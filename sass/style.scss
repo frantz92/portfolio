@@ -4,31 +4,63 @@ html {
   margin: 0;
   font-family: 'Comfortaa', cursive;
   color: white;
+  background-color: black;
 }
 .container {
-  height: 100%;
+  height: 500px;
   max-width: auto;
   margin: 0;
-  padding: 150px 40px;
-  background-color: black;
+  padding: 150px 40px 60px 40px;
   display: flex;
   flex-wrap: wrap;
 }
 
-h2 {
+.hello {
   color: white;
   font-family: 'Comfortaa', cursive;
   font-size: 54px;
   font-weight: 300;
   margin: 25px 0;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-h1 {
+.anim-typewriter {
+  animation: typewriter 2s steps(30) 1s 1 normal both,
+    blinkTextCursor 0.7s steps(30) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 10.5em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.name {
+  opacity: 0;
   color: white;
   font-family: 'Comfortaa', cursive;
   font-size: 108px;
   margin: 0;
   font-weight: 700;
+  transition: 3s 4s;
+}
+
+.name.is-visible {
+  opacity: 1;
 }
 
 .nav {
@@ -36,28 +68,43 @@ h1 {
   right: 40px;
 }
 
-.nav a {
+.link {
+  opacity: 0;
+  transform: translateY(6em);
   margin: 0;
   //padding: 10px 10px;
   position: relative;
   display: inline-block;
   margin: 45px 0 0 15px;
-  outline: none;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 300;
-  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
   font-size: 16px;
 }
 
-.nav a:hover:before {
+.link:nth-of-type(1n) {
+  transition: 2s 5s;
+}
+.link:nth-of-type(2n) {
+  transition: 2s 5.4s;
+}
+.link:nth-of-type(3n) {
+  transition: 2s 5.8s;
+}
+
+.link.is-visible {
+  opacity: 1;
+  transform: translate(0em);
+}
+
+.link:hover:before {
   margin-top: 13px;
   width: 110%;
 }
 
-.nav a::before {
+.link::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -68,12 +115,12 @@ h1 {
   transition-duration: 0.7s;
 }
 
-.nav a:hover:after {
+.link:hover:after {
   height: 25px;
   top: -5px;
 }
 
-.nav a::after {
+.link::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -84,6 +131,17 @@ h1 {
   transition-duration: 0.7s;
 }
 
+.about {
+  opacity: 0;
+  transform: translateY(0em);
+  transition: transform 3s 1s, opacity 3s 1s ease-out;
+  will-change: transform, opacity;
+}
+
+.about.is-visible {
+  opacity: 1;
+  transform: translateY(9.5em);
+}
 /*
 .nav a:hover::after {
   position: absolute;
