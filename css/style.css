@@ -6,6 +6,15 @@ html {
   color: white;
   background-color: black;
   cursor: default;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .container {
@@ -17,17 +26,7 @@ html {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-.horizontal-container {
-  height: 500px;
-  margin: 0;
-  padding: 150px 40px 60px 40px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  overflow-x: scroll;
+  scroll-snap-align: center;
 }
 
 .hello {
@@ -155,27 +154,47 @@ html {
   will-change: transform, opacity;
 }
 
-.about.is-visible,
-.education.is-visible {
+.about.is-visible {
   opacity: 1;
   transform: translateY(9.5em);
 }
 
-.education {
+.time-point.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.wrapper-outside {
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  scroll-snap-align: center;
+}
+
+.wrapper {
+  height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 400vh;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.time-point {
   opacity: 0;
-  transform: translateY(15em);
+  transform: translateX(30em);
   transition: transform 2s 0.5s, opacity 1s 0.5s ease-out;
   will-change: transform, opacity;
-}
-
-.timeline-title {
-  position: absolute;
-  left: 250px;
-  top: 1000px;
-}
-
-/* The actual timeline (the vertical ruler) */
-.timeline {
   width: 400px;
   height: 40px;
   padding: 0;
@@ -183,12 +202,15 @@ html {
   position: relative;
 }
 
-.timeline:nth-of-type(1n) {
+.timeline-title {
+  color: white;
+  position: relative;
   margin-left: 400px;
+  margin-right: -3px;
 }
 
 /* The actual timeline (the vertical ruler) */
-.timeline::after {
+.time-point::after {
   content: '';
   position: absolute;
   width: 400px;
@@ -227,7 +249,7 @@ html {
 }
 
 .circle:hover {
-  transform: scale(12);
+  transform: scale(6);
 }
 
 .circle:hover .text {
