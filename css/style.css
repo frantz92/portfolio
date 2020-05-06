@@ -5,6 +5,7 @@ html {
   font-family: 'Comfortaa', cursive;
   color: white;
   background-color: black;
+  cursor: default;
 }
 
 .container {
@@ -16,6 +17,17 @@ html {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.horizontal-container {
+  height: 500px;
+  margin: 0;
+  padding: 150px 40px 60px 40px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: scroll;
 }
 
 .hello {
@@ -59,6 +71,8 @@ html {
   margin: 0;
   font-weight: 700;
   transition: 3s 4s;
+  will-change: opacity;
+  height: 100%;
 }
 
 .name.is-visible {
@@ -76,7 +90,7 @@ html {
   margin: 0;
   position: relative;
   display: inline-block;
-  margin: 45px 0 0 15px;
+  margin: 45px 0 0 0px;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
@@ -136,32 +150,104 @@ html {
 
 .about {
   opacity: 0;
-  transform: translateY(0em);
-  transition: transform 3s 1s, opacity 3s 1s ease-out;
+  transform: translateY(15em);
+  transition: transform 2s 0.25s, opacity 1s 0.25s ease-out;
   will-change: transform, opacity;
 }
 
-.about.is-visible {
+.about.is-visible,
+.education.is-visible {
   opacity: 1;
   transform: translateY(9.5em);
 }
 
-/*
-.nav a:hover::after {
-  position: absolute;
-  top: 20;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #fff;
-  content: '';
-  -webkit-transition: height 0.3s;
-  -moz-transition: height 0.3s;
-  transition: height 0.3s;
+.education {
+  opacity: 0;
+  transform: translateY(15em);
+  transition: transform 2s 0.5s, opacity 1s 0.5s ease-out;
+  will-change: transform, opacity;
 }
 
-.nav a:hover {
+.timeline-title {
+  position: absolute;
+  left: 250px;
+  top: 1000px;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  width: 400px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.timeline:nth-of-type(1n) {
+  margin-left: 400px;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 2px;
+  background-color: white;
+  top: 20px;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* Container around content */
+.circle {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 180px;
+  top: -5px;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 50%;
   transition: 2s;
+  z-index: 1;
+}
+
+.text {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 25px;
+  opacity: 0;
+  transition: opacity 1s 0.75s ease-out;
+  font-size: 1px;
+  color: black;
+}
+
+.circle:hover {
+  transform: scale(12);
+}
+
+.circle:hover .text {
+  opacity: 1;
+}
+
+/*
+.circle > h1,
+.circle > p {
+  opacity: 0;
+  transition: 0.2s;
+  color: black;
+  font-size: 20px;
+}
+
+.circle:hover > h1,
+.circle:hover > p {
+  opacity: 1;
+  font-size: 2px;
+  transform: translateY(9.5em);
 }
 */
 /*# sourceMappingURL=style.css.map */
