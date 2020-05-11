@@ -9,8 +9,8 @@ html {
   scrollbar-width: none;
   -ms-overflow-style: none;
   scroll-behavior: smooth;
-  -ms-scroll-snap-type: y proximity;
-      scroll-snap-type: y proximity;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
 }
 
 ::-webkit-scrollbar {
@@ -457,6 +457,7 @@ html {
 
 .front_end_button {
   position: absolute;
+  outline: none;
   background-color: black;
   height: 50px;
   width: 50px;
@@ -464,13 +465,24 @@ html {
   border: none;
   color: white;
   border-radius: 50%;
-  display: inline-block;
   text-align: center;
-  font-size: 10px;
+  font-size: 12px;
   top: 50%;
   left: 50%;
-  margin-right: -50%;
   transform: translate(-50%, -50%);
+}
+
+.front_end_button:focus {
+  width: 0.5px;
+  top: 300%;
+  border-radius: 0;
+  height: 2000px;
+  background: white;
+  transition-duration: 1s;
+}
+
+#front-end {
+  top: 150vw;
 }
 
 /*
