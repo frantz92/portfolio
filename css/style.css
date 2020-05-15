@@ -18,7 +18,7 @@ html {
 }
 
 .container {
-  height: 500px;
+  height: 100vh;
   max-width: auto;
   margin: 0;
   padding: 150px 40px 60px 40px;
@@ -171,8 +171,9 @@ html {
   transform-origin: top left;
   overflow-x: hidden;
   overflow-y: scroll;
-  position: absolute;
+  position: relative;
   scroll-snap-align: center;
+  scrollbar-width: none;
 }
 
 .wrapper {
@@ -183,7 +184,7 @@ html {
       flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  width: 400vh;
+  width: 580vh;
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
   -ms-flex-align: center;
@@ -195,7 +196,7 @@ html {
   transform: translateX(30em);
   transition: transform 2s 0.5s, opacity 1s 0.5s ease-out;
   will-change: transform, opacity;
-  width: 380px;
+  width: 500px;
   height: 40px;
   padding: 0;
   margin: 0;
@@ -213,7 +214,7 @@ html {
 .time-point::after {
   content: '';
   position: absolute;
-  width: 400px;
+  width: 500px;
   height: 2px;
   background-color: white;
   top: 20px;
@@ -235,7 +236,7 @@ html {
   border-radius: 50%;
   transition: transform 1s;
   -webkit-transition: all 1s;
-  z-index: 3;
+  z-index: 1;
 }
 
 .text {
@@ -252,6 +253,14 @@ html {
   z-index: 6;
 }
 
+.text h1 {
+  margin: 5px 0 0 3px;
+}
+
+.text p {
+  margin: 0;
+}
+
 .circle:hover {
   transform: scale(1);
   -webkit-transform: scale(1);
@@ -262,11 +271,11 @@ html {
 }
 
 .circle:hover .logos {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .circle:hover .photos {
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .logos {
@@ -472,33 +481,76 @@ html {
   transform: translate(-50%, -50%);
 }
 
-.front_end_button:focus {
+.card {
+  position: absolute;
+  top: -30px;
+  left: 80px;
+  width: 200px;
+  height: 200px;
+}
+
+.card:hover > .card_front {
+  transform: perspective(600px) rotateY(-180deg);
+  opacity: 0.5;
+}
+
+.card:hover > .card_back {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.card_front,
+.card_back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: 0.6s linear;
+}
+
+.card_front {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.card_back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  color: black;
+  transform: perspective(600px) rotateY(180deg);
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.logo_html {
+  position: absolute;
+  top: 160px;
+  transform: scale(0.6);
+  left: 95px;
+}
+
+.logo_css {
+  position: absolute;
+  top: 160px;
+  transform: scale(0.6);
+  left: 155px;
+}
+
+.icon_link {
+  color: black;
+  position: absolute;
+  font-size: 50px;
+  top: 100px;
+  transition: 0.3s ease-in-out;
+}
+
+.icon_link:hover {
+  transform: scale(1.2);
+}
+
+/*.front_end_button:focus {
   width: 0.5px;
   top: 300%;
   border-radius: 0;
   height: 2000px;
   background: white;
-  transition-duration: 1s;
-}
-
-#front-end {
-  top: 150vw;
-}
-
-/*
-.circle > h1,
-.circle > p {
-  opacity: 0;
-  transition: 0.2s;
-  color: black;
-  font-size: 20px;
-}
-
-.circle:hover > h1,
-.circle:hover > p {
-  opacity: 1;
-  font-size: 2px;
-  transform: translateY(9.5em);
-}
-*/
+  transition-duration: 0.5s;
+}*/
 /*# sourceMappingURL=style.css.map */

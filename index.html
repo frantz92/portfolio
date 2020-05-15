@@ -13,6 +13,9 @@
       href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap'
       rel='stylesheet'
     />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link rel='stylesheet' href='css/style.css' />
   </head>
 
@@ -26,22 +29,22 @@
                     <h1 class='name show-on-scroll'>
                         I am Patrick
                     </h1>
-            </div>
-            <nav class='nav'>
-                <a href='#education' class='link show-on-scroll'>education</a>
-                <a href='#front-end' class='link show-on-scroll'>front-end</a>
-                <a href='#' class='link show-on-scroll'>contact</a>
-            </nav>
-            <div class='about'>
-                <p>
-                a begginer front-end developer
-                </p>
-            </div>
+                </div>
+                <nav class='nav'>
+                    <a href='#education' class='link show-on-scroll'>education</a>
+                    <a href='#front_end' class='link show-on-scroll'>front-end</a>
+                    <a href='#contact' class='link show-on-scroll'>contact</a>
+                </nav>
+                <div class='about'>
+                    <p>
+                    a begginer front-end developer
+                    </p>
+                </div>
             </div>
         </header>
 
-        <div class='wrapper-outside show-on-scroll' id='education'>
-            <div class='wrapper'>
+        <section class='wrapper-outside show-on-scroll' >
+            <div class='wrapper' id='education'>
                 <h1 class='timeline-title show-on-scroll'>education</h1>
                 <div class='time-point show-on-scroll'>
                     <div class='circle'>
@@ -53,6 +56,10 @@
                             <br />
                             <p>faculty of electrical engineering</p>
                         </div>
+                        <div class='logos'>
+                            <a href="https://www.zut.edu.pl/" target="_blank"><img style="position: absolute;top: 110px;left: 50px;" src='./images/zut.png' alt="ZUT"></a>
+                            <a href="https://we.zut.edu.pl/" target="_blank"><img style="position: absolute;top: 100px;left: 200px;" src='./images/we.png' alt="WE"></a>
+                        </div>
                     </div>
                 </div>
                 <div class='time-point show-on-scroll'>
@@ -72,18 +79,20 @@
                     </div>
                 </div>
                 <div class='time-point show-on-scroll'>
-                    <div class='circle'>
-                        <div class='text'>
-                            <h1>engineer's thesis</h1>
-                            <p>the design of portable waterproof system </br> to measure weather parameters</p>
+                    <a style="display:block" href="./resources/Frankowski_praca_dyplomowa.pdf" target="_blank">
+                        <div class='circle'>
+                            <div class='text'>
+                                <h1>engineer's thesis</h1>
+                                <p>the design of portable waterproof system </br> to measure weather parameters</p>
+                            </div>
+                            <div class='photos'>
+                                <img class="image_electronics" src='./images/eng_electronics.png' alt="Electronics"> 
+                                <img class="image_shell" src='./images/eng_shell.png' alt="Shell"> 
+                                <img class="image_system" src='./images/eng_system.png' alt="System"> 
+                                <img class="image_pcb" src='./images/eng_pcb.png' alt="engPCB"> 
+                            </div>
                         </div>
-                        <div class='photos'>
-                            <img class="image_electronics" src='./images/eng_electronics.png' alt="Electronics"> 
-                            <img class="image_shell" src='./images/eng_shell.png' alt="Shell"> 
-                            <img class="image_system" src='./images/eng_system.png' alt="System"> 
-                            <img class="image_pcb" src='./images/eng_pcb.png' alt="engPCB"> 
-                        </div>
-                    </div>
+                    </a>
                 </div>
                 <div class='time-point show-on-scroll'>
                     <div class='circle'>
@@ -102,19 +111,21 @@
                     </div>
                 </div>
                 <div class='time-point show-on-scroll'>
-                    <div class='circle'>
-                        <div class='text'>
-                            <h1>master's thesis</h1>
-                            <p>the study of selected AI algorithms <br/> to predict events based on meteorological data</p>
+                    <a style="display:block" href="./resources/Frankowski_Patryk_Praca_Dyplomowa_Magisterska.pdf" target="_blank">
+                        <div class='circle'>
+                            <div class='text'>
+                                <h1>master's thesis</h1>
+                                <p>the study of selected AI algorithms <br/> to predict events based on meteorological data</p>
+                            </div>
+                            <div class='photos'>
+                                <img class="image_algorythms" src='./images/mas_algorythms.png' alt="Algorythms"> 
+                                <img class="image_api" src='./images/mas_api.png' alt="API"> 
+                                <img class="image_data" src='./images/mas_data.png' alt="Data"> 
+                                <img class="image_device" src='./images/mas_device.png' alt="Device"> 
+                                <img class="image_results" src='./images/mas_results.png' alt="Results"> 
+                            </div>
                         </div>
-                        <div class='photos'>
-                            <img class="image_algorythms" src='./images/mas_algorythms.png' alt="Algorythms"> 
-                            <img class="image_api" src='./images/mas_api.png' alt="API"> 
-                            <img class="image_data" src='./images/mas_data.png' alt="Data"> 
-                            <img class="image_device" src='./images/mas_device.png' alt="Device"> 
-                            <img class="image_results" src='./images/mas_results.png' alt="Results"> 
-                        </div>
-                    </div>
+                    </a>
                 </div>
                 <div class='time-point show-on-scroll'>
                     <div class='circle'>
@@ -136,40 +147,46 @@
                         <div class='text'>
                             <h1>front-end</h1>
                         </div>
-                        <button class='front_end_button' href='#front-end'>see<br/>more</button>
+                        <a class='front_end_button' href='#front_end'>see<br/>more</a>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class='wrapper-outside show-on-scroll' id='front-end'>
-            <div class='wrapper'>
+        <section class='wrapper-outside show-on-scroll' >
+            <div class='wrapper' id='front_end'>
                 <h1 class='timeline-title show-on-scroll'>front-end</h1>
-                <div class='time-point show-on-scroll'>
+                <div class='time-point show-on-scroll' >
                     <div class='circle'>
                         <div class='text'>
-                            <h1>studies</h1>
-                            <p>west pomeranian university of technology <br /> Szczecin, Poland,</p>
+                            <h1>bootcamp</h1>
+                            <p>front-end: react<br />on-line with Kodilla</p>
                             <br />
-                            <p>automatic control and robotics,</p>
-                            <br />
-                            <p>faculty of electrical engineering</p>
+                            <p>100% course completion certificate<br />100% positive code review</p>
+                        </div>
+                        <div class='logos'>
+                            <a href="https://kodilla.com/pl/bootcamp/front-end?&editionId=319" target="_blank"><img style="position:absolute;top: 130px;left: 50px;" src='./images/kodilla.png' alt="Kodilla"></a>
                         </div>
                     </div>
                 </div>
                 <div class='time-point show-on-scroll'>
                     <div class='circle'>
                         <div class='text'>
-                            <h1>what i've learned</h1>
-                            <p>engineer's degree</p>
+                            <h1>first website</h1>
+                            <p>Architect's website</p>
                         </div>
                         <div class='logos'>
-                            <img class="logo_c" src='./images/c++.png' alt="C++">
-                            <img class="logo_plc" src='./images/plc.png' alt="PLC">
-                            <img class="logo_solder" src='./images/soldering.png' alt="Soldering">
-                            <img class="logo_pcb" src='./images/pcb.png' alt="PCB">
-                            <img class="logo_arduino" src='./images/arduino.png' alt="Arduino">
-                            <img class="logo_eagle" src='./images/Eagle.png' alt="Eagle">
+                            <div class="card">
+                                <div class="card_front">
+                                    <img class="web_architect" src='./images/architect.png' alt="Architect_Web">
+                                </div>
+                                <div class="card_back">
+                                    <a href="https://github.com/frantz92/first_website" target="_blank"><i  class="icon_link fab fa-github" style="left:25px"></i></a>
+                                    <a href="https://frantz92.github.io/first_website/" target="_blank"><i  class="icon_link fas fa-laptop-code" style="left: 110px;"></i></a>
+                                </div>
+                            </div>
+                            <img class="logo_html" src='./images/html.png' alt="HTML">
+                            <img class="logo_css" src='./images/css.png' alt="CSS">
                         </div>
                     </div>
                 </div>
@@ -242,8 +259,18 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         
+        <section class='container' id='contact'>
+            <div class='page-title'>
+                <h2 class='hello anim-typewriter'>
+                    contact me
+                </h2>
+                <h1 class='name show-on-scroll'>
+                    patrick frankowski
+                </h1>
+            </div>
+        </section>
 
 </body>
   <script src='js/script.js'></script>
