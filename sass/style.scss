@@ -9,7 +9,12 @@ html {
   scrollbar-width: none;
   -ms-overflow-style: none;
   scroll-behavior: smooth;
+  scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
 }
 
 ::-webkit-scrollbar {
@@ -42,12 +47,26 @@ html {
     blinkTextCursor 0.7s steps(30) infinite normal;
 }
 
+.anim-typewriter-contact {
+  animation: typewriter-contact 2s steps(30) 1s 1 normal both,
+    blinkTextCursor 0.7s steps(30) infinite normal;
+}
+
 @keyframes typewriter {
   from {
     width: 0;
   }
   to {
     width: 10.5em;
+  }
+}
+
+@keyframes typewriter-contact {
+  from {
+    width: 0;
+  }
+  to {
+    width: 6em;
   }
 }
 
@@ -69,7 +88,6 @@ html {
   font-weight: 700;
   transition: 3s 4s;
   will-change: opacity;
-  height: 100%;
 }
 
 .name.is-visible {
@@ -531,6 +549,26 @@ html {
   top: 130px;
   transform: scale(0.4);
   left: 220px;
+}
+
+.logo_ajax {
+  position: absolute;
+  top: 130px;
+  transform: scale(0.6);
+  left: 230px;
+}
+
+.logo_json {
+  position: absolute;
+  top: 80px;
+  transform: scale(0.7);
+  left: 220px;
+}
+
+.logo_handlebars {
+  position: absolute;
+  top: 80px;
+  left: 0px;
 }
 
 .logo_js {
