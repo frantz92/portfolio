@@ -533,6 +533,20 @@ html {
   left: 155px;
 }
 
+.logo_bootstrap {
+  position: absolute;
+  top: 130px;
+  transform: scale(0.4);
+  left: 220px;
+}
+
+.logo_js {
+  position: absolute;
+  top: 130px;
+  transform: scale(0.6);
+  left: 30px;
+}
+
 .icon_link {
   color: black;
   position: absolute;
