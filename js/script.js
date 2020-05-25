@@ -53,8 +53,6 @@ document.onmousemove = function () {
   let xCenter = (rect.right + rect.left) / 2;
   let yCenter = (rect.top + rect.bottom) / 2;
 
-  console.log("left:", rect.left, "right:", rect.right, "center:", xCenter)
-
   let x = event.clientX * 50 / xCenter + '%';
   let y = event.clientY * 50 / yCenter + '%';
 

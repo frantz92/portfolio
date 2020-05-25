@@ -198,7 +198,7 @@ section {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  width: 580vh;
+  width: 300vw;
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
   align-items: center;
@@ -296,6 +296,8 @@ section {
 
 .circle:hover .logos {
   opacity: 1;
+  left: 20px;
+  top: 140px;
 }
 
 .circle:hover .photos {
@@ -308,11 +310,11 @@ section {
   width: 350px;
   height: 250px;
   left: 20px;
-  top: 140px;
+  top: -100px;
   margin: 0px;
   padding: 0px;
-  transition: opacity 1s 1s;
-  -webkit-transition: all 1s 0.8s;
+  transition: opacity .8s .1s;
+  -webkit-transition: all .8s .1s;
 }
 
 .logo_c {
@@ -492,9 +494,10 @@ section {
   position: absolute;
   outline: none;
   background-color: black;
-  height: 80px;
-  width: 80px;
+  height: 110px;
+  width: 110px;
   text-decoration: none;
+  text-align: center;
   border: none;
   color: white;
   border-radius: 50%;
@@ -503,6 +506,26 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.front_end_button p {
+  position: absolute;
+  margin: 0;
+  left: 20%;
+  opacity: 0;
+  transition: opacity .5s .5s ease-in-out;
+}
+
+.front_end_button:hover > p {
+  opacity: 1;
+}
+
+.front_end_button p:nth-of-type(1n) {
+  top: 40%;
+}
+
+.front_end_button p:nth-of-type(2n) {
+  top: 50%;
 }
 
 .card {
@@ -602,6 +625,7 @@ section {
 }
 
 .studies-logos a {
+
   position: absolute;
 }
 
@@ -663,3 +687,27 @@ section {
 .contact-links .link::before {
   width: 175%;
 }
+
+/* The "Angry eye" effect
+.eyeball {
+  overflow-y: hidden;
+}
+*/
+
+@media (max-width: 767px) {
+  .studies-logos{
+    pointer-events: none;
+  }
+}
+
+.diploma {
+  display: none;
+}
+
+.circle:hover .diploma {
+  height: 400px;
+  display: block;
+  position: absolute;
+  width: 400px;
+}
+
