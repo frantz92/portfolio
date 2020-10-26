@@ -4,13 +4,17 @@ let scroll =
     window.setTimeout(callback, 1000 / 60);
   };
 
-let elementsToShow = document.querySelectorAll('.show-on-scroll');
+let elementsToShow = document.querySelectorAll('.show-on-viewport');
+
+/* Do something on scroll function
 
 window.addEventListener('scroll', function (element) {
   console.log('scroll');
   let aboutToShow = document.querySelector('.about');
   aboutToShow.classList.add('is-visible');
 });
+
+*/
 
 function loop() {
   elementsToShow.forEach(function (element) {
