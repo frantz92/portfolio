@@ -99,6 +99,7 @@ section {
   opacity: 1;
 }
 
+/* Navigation list
 .nav {
   position: absolute;
   right: 40px;
@@ -166,7 +167,7 @@ section {
   height: 25px;
   top: -5px;
 }
-
+*/
 .about {
   display: inline;
   position: relative;
@@ -186,7 +187,10 @@ section {
 }
 
 .start-tour-button {
+  position: relative;
   opacity: 0;
+  color: white;
+  text-decoration: none;
   display: block;
   margin: auto;
   text-align: center;
@@ -197,34 +201,28 @@ section {
 }
 
 .start-tour-button.is-visible {
-  opacity: 1;
+  opacity: .5;
   transform: translateY(0);
 }
 
-.start-tour-text {
-  margin: 0;
-  opacity: 0;
-  transition: opacity 2s 8s ease-in-out;
+.start-tour-button a {
+  position: relative;
 }
 
-.start-tour-text.is-visible {
-  opacity: 0.5;
+.start-tour-button span {
+  position: absolute;
+  bottom: -15%;
+  left: 47%;
 }
 
 .fa-chevron-down {
   color: white;
   font-size: 500%;
-  opacity: 0.5;
   transition: transform 0.75s ease-in-out;
 }
 
 .fa-chevron-down:hover {
   transform: scale(1.25);
-}
-
-.time-point.is-visible {
-  opacity: 1;
-  transform: translateX(0);
 }
 
 .wrapper-outside {
@@ -264,6 +262,11 @@ section {
   padding: 0;
   margin: 0;
   position: relative;
+}
+
+.time-point.is-visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .timeline-title {
