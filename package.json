@@ -35,6 +35,7 @@
     "npm-run-all": "^4.1.5",
     "onchange": "^6.1.0",
     "stylelint": "^13.0.0",
+    "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.14.2"
   },
   "description": ""
