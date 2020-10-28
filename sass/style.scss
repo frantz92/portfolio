@@ -184,6 +184,47 @@ section {
   opacity: 1;
 }
 
+.start-tour {
+  text-align: center;
+}
+
+.start-tour-button {
+  opacity: 0;
+  display: block;
+  margin: auto;
+  text-align: center;
+  background: transparent;
+  border: none;
+  transform: translateY(-100%);
+  transition: opacity 3s 7s, transform 3s 6.5s ease-out;
+}
+
+.start-tour-button.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.start-tour-text {
+  margin: 0;
+  opacity: 0;
+  transition: opacity 2s 8s ease-in-out;
+}
+
+.start-tour-text.is-visible {
+  opacity: 0.5;
+}
+
+.fa-chevron-down {
+  color: white;
+  font-size: 500%;
+  opacity: 0.5;
+  transition: transform 0.75s ease-in-out;
+}
+
+.fa-chevron-down:hover {
+  transform: scale(1.25);
+}
+
 .time-point.is-visible {
   opacity: 1;
   transform: translateX(0);
