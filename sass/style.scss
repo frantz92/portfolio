@@ -245,27 +245,29 @@ section {
   height: 100vh;
   display: -ms-flexbox;
   display: flex;
+  align-content: center;
   -ms-flex-direction: row;
   flex-direction: row;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  width: 300vw;
+  width: 150vw;
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
   -ms-flex-align: center;
   align-items: center;
 }
 
+.timeline-title {
+  color: white;
+  margin-left: 31.5%;
+}
+
 .time-point {
+  height: 10%;
+  width: 20%;
   opacity: 0;
-  transform: translateX(30em);
-  transition: transform 2s 0.5s, opacity 1s 0.5s ease-out;
+  transition: transform 3s 0.5s, opacity 2s 0.5s ease-out;
   will-change: transform, opacity;
-  width: 500px;
-  height: 40px;
-  padding: 0;
-  margin: 0;
-  position: relative;
 }
 
 .time-point.is-visible {
@@ -273,55 +275,46 @@ section {
   transform: translateX(0);
 }
 
-.timeline-title {
-  color: white;
-  position: relative;
-  margin-left: 550px;
-  margin-right: -3px;
-}
-
 /* The actual timeline (the vertical ruler) */
 .time-point::after {
   content: '';
   position: absolute;
-  width: 500px;
+  top: 50%;
+  left: -0.5%;
+  width: 100%;
   height: 2px;
   background-color: white;
-  top: 20px;
-  bottom: 0;
-  left: 0;
 }
 
 /* Container around content */
 .circle {
   content: '';
   position: absolute;
-  transform: scale(0.1);
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  transform: translate(-50%, -50%) scale(0.1);//0.1
+  margin: auto;
   width: 400px;
   height: 400px;
-  left: 100px;
-  top: -185px;
   background-color: white;
-  border: 5px solid black;
+  //border: 5px solid black;
   border-radius: 50%;
   transition: transform 1s;
-  -webkit-transition: all 1s;
   z-index: 1;
 }
 
-.eye {
-  border: solid white 100px;
-  left: -50px;
-  top: -280px;
+.circle:hover {
+  transform-origin: center center;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .text {
   position: absolute;
-  top: 30px;
-  left: 65px;
-  width: 350px;
-  line-height: 2;
-  opacity: 0;
+  height: 35%;
+  padding: 15% 10% 0 15%;
+  line-height: 1.5;
+  opacity: 0;//0
   transition: opacity 1s 0.5s;
   -webkit-transition: all 1s;
   font-size: 13px;
@@ -329,45 +322,46 @@ section {
   z-index: 6;
 }
 
-.eye .text {
-  top: -25px;
-  left: -20px;
-}
-
-.text h1 {
-  margin: 5px 0 0 3px;
-}
-
-.text p {
-  margin: 0;
-}
-
-.circle:hover {
-  transform: scale(1);
-  -webkit-transform: scale(1);
-}
-
 .circle:hover .text {
   opacity: 1;
 }
 
-.logos {
-  opacity: 0;
-  position: relative;
-  width: 350px;
-  height: 250px;
-  left: 20px;
-  top: -100px;
+.circle .text h1 {
   margin: 0;
-  padding: 0;
-  transition: opacity 0.8s 0.1s;
-  -webkit-transition: all 0.8s 0.1s;
+}
+
+.logos {
+  opacity: 0;//0
+  position: relative;
+  transform: translateY(0%);//0
+  margin: 0;
+  padding: 10% 10% 5% 10%;
+  height: 35%;
+  transition: opacity 0.8s 0.1s, transform 1s 0.1s;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.learn-logos {
+  top: -30%;
+  justify-content: center;
+  padding: 10% 5%;
+}
+
+.learn-logos img {
+  transform: scale(0.8);
+  align-self: center;
 }
 
 .circle:hover .logos {
+  transform: translateY(100%);
   opacity: 1;
-  left: 20px;
-  top: 140px;
+}
+
+.diploma {
+  display: block;
 }
 
 .photos {
@@ -382,41 +376,6 @@ section {
 
 .circle:hover .photos {
   opacity: 1;
-}
-
-.logo_c {
-  position: absolute;
-  top: 20px;
-}
-
-.logo_plc {
-  position: absolute;
-  left: 120px;
-  top: -15px;
-}
-
-.logo_solder {
-  position: absolute;
-  top: 120px;
-  left: 50px;
-}
-
-.logo_pcb {
-  position: absolute;
-  left: 230px;
-  top: -30px;
-}
-
-.logo_arduino {
-  position: absolute;
-  left: 220px;
-  top: 100px;
-}
-
-.logo_eagle {
-  position: absolute;
-  top: 80px;
-  left: 140px;
 }
 
 .image_electronics {
@@ -444,41 +403,6 @@ section {
   transform: scale(0.8);
   left: 200px;
   top: 50px;
-}
-
-.logo_ai {
-  position: absolute;
-  top: 80px;
-}
-
-.logo_azure {
-  position: absolute;
-  left: 230px;
-  top: -30px;
-}
-
-.logo_data_science {
-  position: absolute;
-  left: 100px;
-  top: -5px;
-}
-
-.logo_raspberry {
-  position: absolute;
-  left: 225px;
-  top: 80px;
-}
-
-.logo_python {
-  position: absolute;
-  left: 120px;
-  top: 130px;
-}
-
-.logo_open_cv {
-  position: absolute;
-  transform: scale(0.6);
-  top: -30px;
 }
 
 .image_algorythms {
@@ -509,42 +433,6 @@ section {
 .image_results {
   position: absolute;
   left: 10px;
-}
-
-.logo_3d_printing {
-  position: absolute;
-  left: 250px;
-}
-
-.logo_autocad {
-  position: absolute;
-  top: 100px;
-  left: 10px;
-}
-
-.logo_diy {
-  position: absolute;
-  left: 150px;
-  top: 60px;
-}
-
-.logo_fusion360 {
-  position: absolute;
-  left: 40px;
-  top: 100px;
-}
-
-.logo_solidworks {
-  position: absolute;
-  transform: scale(0.8);
-  left: -50px;
-}
-
-.logo_web_dev {
-  position: absolute;
-  transform: scale(0.5);
-  left: 80px;
-  top: -65px;
 }
 
 .front_end_button {
@@ -682,24 +570,10 @@ section {
   transform: scale(1.2);
 }
 
-.studies-logos a {
-  position: absolute;
-}
-
 .contact-links a {
   color: white;
   text-decoration: none;
   cursor: pointer;
-}
-
-.studies-logos a:nth-of-type(1) {
-  top: 110px;
-  left: 50px;
-}
-
-.studies-logos a:nth-of-type(2) {
-  top: 100px;
-  left: 200px;
 }
 
 .card_back a:nth-of-type(1) i {
@@ -754,6 +628,8 @@ section {
   overflow-y: hidden;
 }
 */
+
+/*
 @media (max-width: 767px) {
   .studies-logos {
     pointer-events: none;
