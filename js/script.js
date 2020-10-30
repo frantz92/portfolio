@@ -74,4 +74,12 @@ const firstCircle = document.querySelector('.circle');
 firstCircle.onmouseover = function() {
   const checkEducation = document.querySelector('.check-education');
   checkEducation.style.display = 'none';
+  const scrollDown = document.querySelector('.scroll-down');
+  scrollDown.classList.add('is-visible');
+}
+
+const educationWrapper = document.querySelector('.wrapper-outside');
+educationWrapper.onscroll = function() {
+  const scrollDown = document.querySelector('.scroll-down');
+  scrollDown.classList.remove('is-visible');
 }

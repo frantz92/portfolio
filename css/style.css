@@ -292,6 +292,35 @@ section {
   left: -30%;
 }
 
+.scroll-down {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  position: absolute;
+  bottom: 25%;
+  left: 55%;
+  opacity: 0;
+  transition: opacity 2s 6s;
+}
+
+.scroll-down.is-visible {
+  opacity: 0.5;
+}
+
+.scroll-down.is-visible img {
+  animation: scrollDown 2s ease-out 6s 3 normal forwards;
+}
+
+@keyframes scrollDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 .time-point {
   height: 10%;
   width: 20%;
