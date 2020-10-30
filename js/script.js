@@ -69,3 +69,9 @@ document.onmousemove = function () {
 
   eye.style.left = x;
 }
+
+const firstCircle = document.querySelector('.circle');
+firstCircle.onmouseover = function() {
+  const checkEducation = document.querySelector('.check-education');
+  checkEducation.style.display = 'none';
+}
