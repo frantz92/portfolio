@@ -256,6 +256,7 @@ section {
 .timeline-title {
   color: white;
   margin-left: 31.5%;
+  white-space: nowrap;
 }
 
 .check-education {
@@ -270,8 +271,8 @@ section {
 
 .check-education.is-visible {
   opacity: 0.5;
-  transition: opacity 2s 6s;
-  animation: checkBounce 0.5s ease 7s 3 normal forwards running;
+  transition: opacity 2s 3s;
+  animation: checkBounce 0.5s ease 4s 3 normal forwards running;
 }
 
 @keyframes checkBounce {
@@ -294,7 +295,7 @@ section {
   color: white;
   position: absolute;
   top: -50%;
-  left: -30%;
+  left: -25%;
 }
 
 .time-point {
@@ -302,7 +303,7 @@ section {
   width: 20%;
   opacity: 0;
   transform: translateX(300%);
-  transition: transform 2.5s 0.5s ease-out, opacity 2s 0.5s ease-out;
+  transition: transform 2.5s 0.5s ease-out, opacity 2s 0.5s ease-in-out;
   will-change: transform, opacity;
 }
 
@@ -375,15 +376,19 @@ section {
 .logos {
   opacity: 0;//0
   position: relative;
-  transform: translateY(0%);//0
+  transform: translateY(0);//0
   margin: 0;
-  padding: 10% 10% 5% 10%;
+  padding: 0 10%;
   height: 35%;
   transition: opacity 0.8s 0.1s, transform 1s 0.1s;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   flex-direction: row;
+}
+
+.studies-logos {
+  padding: 5% 10%;
 }
 
 .learn-logos {
@@ -393,8 +398,8 @@ section {
 }
 
 .learn-logos img {
-  transform: scale(0.8);
-  align-self: center;
+  //transform: scale(0.8);
+  margin: 2.5%;
 }
 
 .circle:hover .logos {
@@ -409,7 +414,7 @@ section {
   bottom: 25%;
   left: 55%;
   opacity: 0;
-  transition: opacity 2s 6s;
+  transition: opacity 2s 3s;
 }
 
 .scroll-down.is-visible {
@@ -417,7 +422,7 @@ section {
 }
 
 .scroll-down.is-visible img {
-  animation: scrollDown 2s ease-out 6s 3 normal forwards;
+  animation: scrollDown 2s ease-out 3s 3 normal forwards;
 }
 
 @keyframes scrollDown {
@@ -544,10 +549,10 @@ section {
 
 .card {
   position: absolute;
-  top: -30px;
-  left: 80px;
-  width: 200px;
-  height: 200px;
+  top: -15%;
+  left: 25%;
+  width: 50%;
+  height: 150%;
 }
 
 .card_front,
@@ -582,50 +587,51 @@ section {
 
 .logo_html {
   position: absolute;
-  top: 160px;
-  transform: scale(0.6);
-  left: 95px;
+  top: 120%;
+  left: 27%;
 }
 
 .logo_css {
   position: absolute;
-  top: 160px;
-  transform: scale(0.6);
-  left: 155px;
+  top: 135%;
+  left: 42%;
 }
 
 .logo_bootstrap {
   position: absolute;
-  top: 130px;
-  transform: scale(0.4);
-  left: 220px;
+  top: 95%;
+  left: 73%;
 }
 
 .logo_ajax {
   position: absolute;
-  top: 130px;
-  transform: scale(0.6);
-  left: 230px;
+  top: 95%;
+  left: 73%;
 }
 
 .logo_json {
   position: absolute;
-  top: 80px;
-  transform: scale(0.7);
-  left: 220px;
+  top: 100%;
+  left: 12%;
 }
 
 .logo_handlebars {
   position: absolute;
-  top: 80px;
-  left: 0;
+  top: 61%;
+  left: 7%;
 }
 
 .logo_js {
   position: absolute;
-  top: 130px;
-  transform: scale(0.6);
-  left: 30px;
+  top: 120%;
+  left: 57%;
+}
+
+.logo_cplus {
+  position: absolute;
+  top: 90%;
+  left: 70%;
+  transform: scale(0.7);
 }
 
 .icon_link {
