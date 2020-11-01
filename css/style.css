@@ -609,8 +609,8 @@ section {
   display: flex;
   -ms-flex-line-pack: center;
       align-content: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   opacity: 0;
   transform: translateY(5vh);
   transition: 2s 1.5s ease-out;
@@ -634,14 +634,15 @@ section {
   width: 100%;
 }
 
-.contact-link {
-  margin: 0 1%;
+.contact-links h4 {
+  margin: 0;
 }
 
 .link {
+  white-space: nowrap;
   color: white;
   cursor: pointer;
-  margin: 0;
+  margin: 0 1%;
   border-top: 2px solid transparent;
   z-index: 1;
   padding: 4px 0;
@@ -649,7 +650,6 @@ section {
   transform: translateY(5vh);
   position: relative;
   display: inline-block;
-  color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -666,23 +666,23 @@ section {
 .link::before {
   position: absolute;
   top: -7%;
-  left: -4%;
-  width: 104%;
+  left: -5%;
+  width: 105%;
   height: 0;
   background: #fff;
   content: '';
-  transition: margin-top 0.7s, height 0.1s 0.8s ease-in-out, width 0.7s;
+  transition: margin-top 0.7s, height 0.1s 0.8s ease-out, width 0.7s;
 }
 
 .link::after {
   position: absolute;
-  top: -10%;
-  left: -2%;
+  top: -5px;
+  left: -2px;
   width: 2px;
   height: 0;
   background: #fff;
   content: '';
-  transition: height 0.7s;
+  transition: height 0.7s ease-out;
 }
 
 .link:hover {
@@ -694,12 +694,11 @@ section {
   margin-top: 30px;
   height: 2px;
   width: 115%;
-  transition: margin-top 0.7s, height 0s ease-in-out, width 0.7s;
+  transition: margin-top 0.7s, height 0s ease-out, width 0.7s;
 }
 
 .link:hover::after {
   height: 40px;
-  top: -5px;
 }
 
 .footer {
