@@ -8,14 +8,12 @@ html {
   cursor: default;
   scrollbar-width: none;
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
   overflow: hidden;
 }
 
 .header,
 .wrapper-outside,
 .contact {
-  scroll-snap-align: center;
   overflow-y: scroll;
   overflow-x: hidden;
   position: relative;
@@ -419,7 +417,7 @@ html {
 }
 
 .circle:hover .logos a {
-  animation: delayActivateLinks 0.1s 1s forwards;
+  animation: delayActivateLinks 0.1s 0.5s forwards;
 }
 
 @keyframes delayActivateLinks{
