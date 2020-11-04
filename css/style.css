@@ -818,23 +818,25 @@ html {
   bottom: 0;
 }
 
-/* The "Angry eye" effect
-.eyeball {
-  overflow-y: hidden;
-}
-*/
 @media (max-width: 1024px) {
   .about {
     display: block;
     left: 1%;
     margin: 5% auto;
-  }
-  .start-tour {
-    bottom: 10vh;
+    font-size: 150%;
   }
   .pointer.is-visible {
     display: block;
     z-index: 0;
+  }
+}
+
+@media (orientation: portrait) {
+  .start-tour {
+    bottom: 15vh;
+  }
+  .pointer {
+    bottom: 16vh;
   }
 }
 
