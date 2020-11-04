@@ -349,10 +349,10 @@ html {
   z-index: 1;
 }
 
-.circle:hover {
+.circle:hover,
+.circle:active {
   transform-origin: center center;
   transform: translate(-50%, -50%) scale(1);
-  z-index: 1;
 }
 
 .circle:hover .check-education.is-visible {
@@ -395,6 +395,7 @@ html {
   justify-content: space-around;
   flex-direction: row;
   z-index: 2;
+  pointer-events: none;
 }
 
 .studies-logos {
@@ -415,6 +416,24 @@ html {
 .circle:hover .logos {
   transform: translateY(100%);
   opacity: 1;
+}
+
+.circle:hover .logos a {
+  animation: delayActivateLinks 0.1s 1s forwards;
+}
+
+@keyframes delayActivateLinks{
+  0% {
+    pointer-events: none;
+  }
+
+  50% {
+    pointer-events: auto;
+  }
+
+  100% {
+    pointer-events: auto;
+  }
 }
 
 .scroll-down {
@@ -830,6 +849,10 @@ html {
   .pointer.is-visible {
     display: block;
     z-index: 0;
+  }
+
+  .scroll-down {
+    display: none;
   }
 }
 
