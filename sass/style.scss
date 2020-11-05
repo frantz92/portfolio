@@ -8,15 +8,6 @@ html {
   cursor: default;
   scrollbar-width: none;
   scroll-behavior: smooth;
-  overflow: hidden;
-}
-
-.header,
-.wrapper-outside,
-.contact {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  position: relative;
 }
 
 ::-webkit-scrollbar {
@@ -230,15 +221,19 @@ html {
 }
 
 .wrapper-outside {
-  width: 100vh;
-  height: 100vw;
-  transform: rotate(-90deg) translateX(-100vh);
+  //border: dashed green 1px;
+  width: 100vw;
+  height: 100vh;
   transform-origin: top left;
   position: relative;
+  overflow: scroll;
 }
 
 .wrapper {
   height: 100vh;
+  width: 150vw;
+  //transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
   display: -ms-flexbox;
   display: flex;
   align-content: center;
@@ -246,9 +241,6 @@ html {
   flex-direction: row;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  width: 150vw;
-  transform: rotate(90deg) translateY(-100vh);
-  transform-origin: top left;
   -ms-flex-align: center;
   align-items: center;
 }
