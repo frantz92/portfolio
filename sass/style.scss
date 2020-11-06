@@ -9,8 +9,8 @@ html {
   scrollbar-width: none;
   scroll-behavior: smooth;
   overflow: hidden;
-  -webkit-backface-visibility: hidden;
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-perspective: 0px !important;
+  -webkit-backface-visibility: visible !important;
 }
 
 ::-webkit-scrollbar {
