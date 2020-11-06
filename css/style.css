@@ -885,6 +885,11 @@ html {
     transform-origin: center center;
     transform: translate(-50%, -50%) scale(1);
   }
+  .contact-me {
+    right: 21vw;
+    bottom: 6vh;
+    transform: scale(0.7);
+  }
 }
 
 @media (orientation: portrait) {
