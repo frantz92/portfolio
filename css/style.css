@@ -824,7 +824,7 @@ html {
   bottom: 0;
 }
 
-@media (max-width: 1366px) {
+@media only screen and (max-device-width: 1366px) {
   .about {
     display: block;
     left: 1%;
@@ -879,11 +879,14 @@ html {
   }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-device-width: 768px) {
   .circle:hover,
   .circle:active {
     transform-origin: center center;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%, 0) scale(1);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
   }
   .contact-me {
     right: 21vw;
