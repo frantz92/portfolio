@@ -56,14 +56,9 @@ function horizontalWrappers() {
     if(innerWrapper.getBoundingClientRect().right <= innerWrapper.offsetWidth && innerWrapper.getBoundingClientRect().right >= horizontalWrapper.offsetWidth) {
       horizontalWrapper.addEventListener('wheel', (e) => {
         horizontalWrapper.scrollLeft += e.deltaY;
-        console.log('outer', horizontalWrapper.offsetWidth);
-        console.log('inner', innerWrapper.offsetWidth);
-        console.log(innerWrapper.getBoundingClientRect().right);
-        //console.log('elo');
         e.preventDefault();
       })
     } else {
-      console.log('Siemanko!');
       return;
     }
   }
