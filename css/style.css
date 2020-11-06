@@ -9,6 +9,8 @@ html {
   scrollbar-width: none;
   scroll-behavior: smooth;
   overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 ::-webkit-scrollbar {
@@ -824,7 +826,7 @@ html {
   bottom: 0;
 }
 
-@media only screen and (max-device-width: 1366px) {
+@media only screen and (max-device-width: 1200px) {
   .about {
     display: block;
     left: 1%;
@@ -884,9 +886,6 @@ html {
   .circle:active {
     transform-origin: center center;
     transform: translate(-50%, -50%, 0) scale(1);
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    -webkit-font-smoothing: subpixel-antialiased;
   }
   .contact-me {
     right: 21vw;
