@@ -833,7 +833,11 @@ html {
     margin: 5% auto;
     font-size: 150%;
   }
+  .start-tour {
+    transform: scale(1.5);
+  }
   .pointer.is-visible {
+    transform: scale(1.5);
     display: block;
   }
   .scroll-down {
@@ -852,7 +856,10 @@ html {
   .circle:hover,
   .circle:active {
     transform-origin: center center;
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+  .check-education {
+    transform: scale(1.5);
   }
   .eye-point {
     display: none;
@@ -898,18 +905,27 @@ html {
   .contact-links::after {
     display: none;
   }
+  .restart-tour {
+    transform: scale(1.5);
+    right: 20%;
+    bottom: 13vh;
+  }
+  .footer {
+    font-size: 120%;
+    bottom: 10vh;
+  }
 }
 
 @media only screen and (max-device-width: 768px) {
   .circle:hover,
   .circle:active {
+    transform: translate(-50%, -50%) scale(1);
     transform-origin: center center;
-    transform: translate(-50%, -50%, 0) scale(1);
   }
   .contact-me {
     right: 21vw;
     bottom: 6vh;
-    transform: scale(0.7);
+    transform: scale(1);
   }
 }
 
