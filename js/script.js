@@ -99,3 +99,5 @@ document.onmousemove = function () {
   }
   eye.style.left = x;
 }
+/* After page refresh */
+window.location.hash = "#page-header";
