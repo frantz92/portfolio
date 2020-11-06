@@ -895,6 +895,26 @@ html {
     bottom: 5%;
     transform: scale(0.7);
   }
+
+  .contact-title {
+    height: 35%;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 15%;
+  }
+
+  .contact-links * {
+    font-size: 40px;
+    margin: 10px 0;
+  }
+
+  .contact-links::after {
+    display: none;
+  }
 }
 
 @media only screen and (max-device-width: 768px) {
@@ -902,7 +922,6 @@ html {
   .circle:active {
     transform-origin: center center;
     transform: translate(-50%, -50%, 0) scale(1);
-
   }
 
   .contact-me {

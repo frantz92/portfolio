@@ -9,8 +9,8 @@ html {
   scrollbar-width: none;
   scroll-behavior: smooth;
   overflow: hidden;
-  -webkit-backface-visibility: hidden;
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-perspective: 0px !important;
+  -webkit-backface-visibility: visible !important;
 }
 
 ::-webkit-scrollbar {
@@ -878,6 +878,25 @@ html {
     right: 21vw;
     bottom: 5%;
     transform: scale(0.7);
+  }
+  .contact-title {
+    height: 35%;
+  }
+  .contact-links {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    padding-left: 15%;
+  }
+  .contact-links * {
+    font-size: 40px;
+    margin: 10px 0;
+  }
+  .contact-links::after {
+    display: none;
   }
 }
 
