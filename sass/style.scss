@@ -179,7 +179,7 @@ html {
   z-index: 0;
 }
 
-.fa-hand-point-up {
+.pointer .fa-hand-point-up {
   position: absolute;
   opacity: 0;
   transform: rotate(-45deg);
@@ -205,7 +205,7 @@ html {
   }
 }
 
-.fa-circle {
+.pointer .fa-circle {
   opacity: 0;
   animation: pointingWave 0.8s 10s 2;
 }
@@ -282,6 +282,63 @@ html {
   100% {
     top: -100%;
   }
+}
+
+.slider.is-visible {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  opacity: 0;
+  animation: slider 4s 8s 1 ease-in-out forwards;
+}
+
+@keyframes slider {
+  0% {
+    opacity: 0.5;
+    transform: translate(0) scale(1);
+  }
+
+  10% {
+    transform: translate(0) scale(0.8);
+  }
+
+  40% {
+    transform: translate(-400%) scale(0.8);
+  }
+
+  50% {
+    transform: translate(-400%) scale(1);
+  }
+  60% {
+    transform: translate(0) scale(1);
+  }
+
+  65% {
+    transform: translate(0) scale(0.8);
+  }
+
+  95% {
+    opacity: 0.5;
+    transform: translate(-400%) scale(0.8);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-400%) scale(0.8);
+  }
+}
+
+.slider .fa-circle {
+  position: relative;
+  font-size: 200%;
+}
+
+.slider .fa-hand-point-up {
+  position: absolute;
+  font-size: 300%;
+  top: 50%;
+  left: 10%;
 }
 
 .check-education span {
@@ -442,7 +499,7 @@ html {
   flex-wrap: nowrap;
   position: absolute;
   bottom: 25%;
-  left: 55%;
+  right: 15%;
   opacity: 0;
   transition: opacity 2s 3s;
 }
@@ -455,6 +512,7 @@ html {
   animation: scrollDown 2s ease-out 3s 3 normal forwards;
 }
 
+
 @keyframes scrollDown {
   from {
     transform: translateY(-100%);
@@ -464,6 +522,18 @@ html {
     transform: translateY(0);
   }
 }
+
+/*.circle:hover .slider {
+  display: block;
+}
+
+.slider {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  font-size: 300%;
+}
+*/
 
 .image_electronics {
   position: absolute;
@@ -852,6 +922,10 @@ html {
     display: none;
   }
 
+  .slider.is-visible {
+    display: block;
+  }
+
   .wrapper-outside {
     height: 50vh;
   }
@@ -922,6 +996,13 @@ html {
   }
 
   .contact-links::after {
+    display: none;
+  }
+
+  .link::before,
+  .link::after,
+  .link:hover::before,
+  .link:hover::after {
     display: none;
   }
 

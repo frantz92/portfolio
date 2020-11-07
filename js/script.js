@@ -70,6 +70,8 @@ firstCircle.onmouseover = function() {
   checkEducation.style.display = 'none';
   const scrollDown = document.querySelector('.scroll-down');
   scrollDown.classList.add('is-visible');
+  const slideLeft = document.querySelector('.slider');
+  slideLeft.classList.add('is-visible');
 }
 /* Remove scrolling info */
 const educationWrapper = document.querySelector('.wrapper-outside');
