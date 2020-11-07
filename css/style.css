@@ -908,15 +908,18 @@ html {
   .restart-tour {
     transform: scale(1.5);
     right: 20%;
-    bottom: 13vh;
+    bottom: 18vh;
   }
   .footer {
     font-size: 120%;
-    bottom: 10vh;
+    bottom: 15vh;
   }
 }
 
 @media only screen and (max-device-width: 768px) {
+  .wrapper-outside:nth-of-type(2) {
+    top: -15vh;
+  }
   .circle:hover,
   .circle:active {
     transform: translate(-50%, -50%) scale(1);
