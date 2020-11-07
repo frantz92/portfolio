@@ -285,6 +285,10 @@ html {
   animation: slider 4s 8s 1 ease-in-out forwards;
 }
 
+.slider * {
+  display: none;
+}
+
 @keyframes slider {
   0% {
     opacity: 0.5;
@@ -737,6 +741,10 @@ html {
   right: 0;
 }
 
+.restart-tour {
+  right: 20%;
+}
+
 .contact-me-button,
 .restart-tour-button {
   position: relative;
@@ -906,6 +914,9 @@ html {
     display: none;
   }
   .slider.is-visible {
+    display: block;
+  }
+  .slider * {
     display: block;
   }
   .wrapper-outside {
