@@ -9,7 +9,7 @@ html {
   scrollbar-width: none;
   scroll-behavior: smooth;
   overflow: hidden;
-  -webkit-perspective: 0px !important;
+  -webkit-perspective: 0 !important;
   -webkit-backface-visibility: visible !important;
 }
 
@@ -314,6 +314,7 @@ html {
   50% {
     transform: translate(-400%) scale(1);
   }
+
   60% {
     transform: translate(0) scale(1);
   }
@@ -367,7 +368,6 @@ html {
   opacity: 1;
   transform: translateX(0);
 }
-
 
 .time-point:hover {
   z-index: 3;
@@ -484,7 +484,7 @@ html {
   animation: delayActivateLinks 1s 1s forwards;
 }
 
-@keyframes delayActivateLinks{
+@keyframes delayActivateLinks {
   0% {
     pointer-events: none;
   }
@@ -516,7 +516,6 @@ html {
   animation: scrollDown 2s ease-out 3s 3 normal forwards;
 }
 
-
 @keyframes scrollDown {
   from {
     transform: translateY(-100%);
@@ -526,18 +525,6 @@ html {
     transform: translateY(0);
   }
 }
-
-/*.circle:hover .slider {
-  display: block;
-}
-
-.slider {
-  position: absolute;
-  left: 50%;
-  bottom: 20%;
-  font-size: 300%;
-}
-*/
 
 .image_electronics {
   position: absolute;
@@ -942,7 +929,7 @@ html {
     height: 50vh;
   }
 
-  .wrapper  {
+  .wrapper {
     position: absolute;
     top: 25%;
     transform: scale(2);
