@@ -9,7 +9,7 @@ html {
   scrollbar-width: none;
   scroll-behavior: smooth;
   overflow: hidden;
-  -webkit-perspective: 0px !important;
+  -webkit-perspective: 0 !important;
   -webkit-backface-visibility: visible !important;
 }
 
@@ -513,17 +513,6 @@ html {
   }
 }
 
-/*.circle:hover .slider {
-  display: block;
-}
-
-.slider {
-  position: absolute;
-  left: 50%;
-  bottom: 20%;
-  font-size: 300%;
-}
-*/
 .image_electronics {
   position: absolute;
   left: 10px;
